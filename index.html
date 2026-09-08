@@ -289,56 +289,169 @@
     .hero-art .frame img{width:220px;height:270px;}
   }
 
+
+  /* ===== LOGIN GATE (must log in first) ===== */
+  body.locked{overflow:hidden;}
+  .gate{position:fixed;inset:0;z-index:999;background:linear-gradient(160deg,#F4A96F 0%,#EF9A5E 60%,#EB9054 100%);display:flex;align-items:center;justify-content:center;padding:24px;overflow:hidden;}
+  .gate .gp{position:absolute;font-size:110px;opacity:.32;filter:blur(1px);pointer-events:none;}
+  .gate-card{position:relative;background:#A4602F;border-radius:34px;padding:40px 38px 36px;width:100%;max-width:420px;color:#FFE9D2;box-shadow:0 34px 70px -18px rgba(80,35,8,.45);}
+  .gate-card h2{color:#FFE9D2;font-size:30px;text-align:center;margin-top:16px;}
+  .gate-card .sub{text-align:center;font-size:14px;margin:8px 0 24px;color:#F7C89B;}
+  .gate-tabs{display:flex;gap:8px;background:rgba(255,232,210,.16);border-radius:20px;padding:5px;margin-bottom:22px;}
+  .gate-tab{flex:1;text-align:center;padding:9px;border-radius:16px;font-weight:700;font-size:14px;color:#FFE9D2;}
+  .gate-tab.active{background:#FFE9D2;color:#8A4A22;}
+  .gate-card .field label{color:#FFE9D2;}
+  .gate-card .field input{background:rgba(255,240,223,.95);}
+  .gate-btn{background:#E8711A;color:#FFEDD8;width:100%;padding:15px;border-radius:16px;font-weight:800;font-size:17px;transition:background .15s ease, transform .15s ease;}
+  .gate-btn:hover{background:#CE5F0E;transform:translateY(-1px);}
+  .gate-err{display:none;color:#FFD9C2;font-size:12.5px;font-weight:700;margin:-10px 0 14px;text-align:center;}
+  .gate-err.show{display:block;}
+
+  /* ===== IMAGE SLOTS (drop your files in at the labeled paths/sizes) ===== */
+  .slot{position:relative;background:repeating-linear-gradient(45deg,#E8B27F 0 14px,#F2C493 14px 28px);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .slot::after{content:attr(data-label);font-size:12px;font-weight:700;color:#7A421F;background:rgba(255,240,223,.92);padding:6px 10px;border-radius:8px;text-align:center;max-width:88%;line-height:1.4;}
+  .slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .logo-slot{width:118px;height:56px;border-radius:12px;background:#FFE7CE;flex:none;}
+  .logo-slot img{object-fit:contain;padding:4px;}
+  .mascot-slot{width:92px;height:112px;border-radius:14px;background:transparent;}
+  .mascot-slot::after{background:rgba(255,240,223,.85);font-size:10px;padding:4px 6px;}
+  .hero-latte-slot{width:100%;height:100%;border-radius:36% 64% 54% 46% / 50% 42% 58% 46%;}
+
+  /* ===== HEADER (matches banner bar in design) ===== */
+  header{background:#C9843F;border-bottom:none;}
+  header .nav{padding:12px 28px;}
+  .nav-links a{color:#4A2515;font-size:16px;}
+  .nav-links a.active{color:#2F1608;}
+  .nav-links a.active::after{background:#4A2515;}
+  .btn-gate{color:#4A2515;font-weight:700;font-size:15px;padding:10px 16px;}
+  .btn-gate2{background:#FFE7CE;color:#4A2515;border-radius:30px;padding:10px 24px;font-weight:700;font-size:15px;transition:background .15s ease;}
+  .btn-gate2:hover{background:#FFF0DF;}
+  header .icon-btn{background:rgba(255,231,206,.6);}
+  header .icon-btn:hover{background:#FFE7CE;}
+
+  /* ===== LANDING BANNER ===== */
+  .hero-banner{position:relative;overflow:hidden;background:linear-gradient(180deg,#F3A66D 0%,#F6B37E 100%);padding:40px 0 0;}
+  .hero-banner .deco{position:absolute;pointer-events:none;user-select:none;line-height:1;}
+  .banner-inner{position:relative;max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1.02fr .98fr;gap:20px;align-items:center;padding:20px 44px 0;}
+  .eyebrow2{font-weight:800;letter-spacing:.07em;color:#6E3517;font-size:15px;margin:30px 0 14px 6px;}
+  .headline-card{position:relative;background:#A4602F;border-radius:28px;padding:46px 42px 66px;color:#FFEAD3;box-shadow:0 26px 52px -18px rgba(90,40,10,.38);}
+  .headline-card h1{font-size:clamp(40px,5vw,68px);line-height:1.08;color:#FFEAD3;font-style:italic;font-weight:700;max-width:12ch;}
+  .headline-card hr{border:none;height:2px;background:rgba(255,234,211,.55);margin:26px 0 20px;width:72%;}
+  .headline-card .intro{font-size:clamp(19px,1.9vw,27px);font-weight:500;max-width:24ch;line-height:1.35;}
+  .try-btn{margin:34px 0 0 6px;background:#E8711A;color:#FFE9D2;font-weight:800;font-size:clamp(26px,2.8vw,42px);letter-spacing:.02em;padding:15px 58px;border-radius:18px;box-shadow:0 16px 30px -8px rgba(160,70,10,.5);transition:transform .15s ease, background .15s ease;}
+  .try-btn:hover{background:#CE5F0E;transform:translateY(-2px);}
+  .hero-right{position:relative;min-height:620px;}
+  .checker{position:absolute;right:-80px;bottom:-70px;width:600px;height:500px;background:repeating-conic-gradient(#F2913D 0% 25%, #FFE7CE 0% 50%);background-size:96px 96px;transform:rotate(-7deg);border-radius:8px;}
+  .scallop-back{position:absolute;top:18px;right:36px;width:440px;height:550px;background:#F2913D;border-radius:38% 62% 55% 45% / 52% 40% 60% 48%;}
+  .scallop{position:absolute;top:0;right:52px;width:440px;height:550px;border:4px dashed #2A1810;border-radius:38% 62% 55% 45% / 52% 40% 60% 48%;padding:28px;background:transparent;}
+
+  /* ===== Banner responsive ===== */
+  @media(max-width:1020px){
+    .banner-inner{grid-template-columns:1fr;padding:10px 24px 0;}
+    .hero-right{min-height:520px;order:-1;}
+    .scallop,.scallop-back{width:340px;height:440px;}
+    .scallop{right:50%;transform:translateX(50%);}
+    .scallop-back{right:50%;transform:translateX(50%) translate(14px,16px);}
+    .checker{right:-120px;bottom:-40px;}
+  }
+  @media(max-width:600px){
+    .headline-card{padding:34px 26px 76px;}
+    .hero-right{min-height:420px;}
+    .scallop,.scallop-back{width:270px;height:350px;}
+    .try-btn{width:calc(100% - 12px);margin-left:6px;}
+    .checker{width:420px;height:340px;background-size:72px 72px;}
+  }
+
 </style>
 </head>
 <body>
+<!-- LOGIN GATE: page is locked until login/signup -->
+<div class="gate" id="gate">
+  <span class="gp" style="top:5%;left:4%;">🎃</span>
+  <span class="gp" style="top:12%;right:5%;">🎃</span>
+  <span class="gp" style="bottom:7%;left:9%;">🎃</span>
+  <span class="gp" style="bottom:16%;right:8%;font-size:80px;">🍁</span>
+  <span class="gp" style="top:48%;left:-1%;font-size:70px;">🍁</span>
+  <div class="gate-card">
+    <div class="logo-slot slot" data-label="images/logo.png · 118×56">
+      <img src="images/logo.png" alt="Brew Haven logo" onerror="this.remove()">
+    </div>
+    <h2 class="display">Brew Haven</h2>
+    <p class="sub">Log in first to start your order</p>
+    <div class="gate-tabs">
+      <button type="button" class="gate-tab active" data-gtab="login">Login</button>
+      <button type="button" class="gate-tab" data-gtab="signup">Sign up</button>
+    </div>
+    <div class="gate-err" id="gateErr">Please fill in all fields correctly.</div>
+    <form id="gateLoginForm">
+      <div class="field"><label>Email address</label><input type="email" id="gateEmail" placeholder="you@email.com"></div>
+      <div class="field"><label>Password</label><input type="password" id="gatePass" placeholder="••••••••"></div>
+      <button class="gate-btn" type="submit">Log in</button>
+    </form>
+    <form id="gateSignupForm" class="hidden">
+      <div class="field"><label>Full name</label><input type="text" id="gateName" placeholder="Juan Dela Cruz"></div>
+      <div class="field"><label>Email address</label><input type="email" id="gateEmail2" placeholder="you@email.com"></div>
+      <div class="field"><label>Password</label><input type="password" id="gatePass2" placeholder="At least 8 characters"></div>
+      <button class="gate-btn" type="submit">Create account</button>
+    </form>
+  </div>
+</div>
+
 
 <header>
   <nav class="nav">
-    <div class="brand">
-      <!-- LOGO: put your logo PNG at images/logo.png -->
-      <span class="mark"><img src="images/logo.png" alt="Brew Haven logo"></span>
-    </div>
+    <a class="logo-slot slot" data-label="images/logo.png · 118×56" href="#home" style="text-decoration:none;">
+      <img src="images/logo.png" alt="Brew Haven logo" onerror="this.remove()">
+    </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#menu">Menu</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#menu" class="active">Menu</a></li>
+      <li><a href="#contact">Locations</a></li>
+      <li><a href="#about">About Us</a></li>
     </ul>
     <div class="nav-actions">
       <button class="icon-btn" id="cartBtn" aria-label="Open cart">🛍️<span class="cart-count" id="cartCount">0</span></button>
-      <button class="btn btn-outline" id="loginBtn">Login</button>
-      <button class="btn btn-primary" id="signupBtn">Sign up</button>
+      <button class="btn btn-gate" id="loginBtn">Login</button>
+      <button class="btn btn-gate2" id="signupBtn">Sign up</button>
       <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
     </div>
   </nav>
 </header>
 
 <main id="home">
-  <section class="hero">
-    <div class="wrap">
-      <div>
-        <span class="eyebrow">Seasonal Launch</span>
-        <h1>Embrace the coziness this rainy season</h1>
-        <p class="lede">Rich espresso, cozy spice, and velvety milk — Brew Haven's Rain Series is built for the days you want to stay a little longer.</p>
-        <div class="cta-row">
-          <button class="btn btn-primary" id="tryNowBtn">Try the Rain Series →</button>
-          <a href="#menu" class="btn btn-outline">See full menu</a>
+  <div class="hero-banner" id="home">
+    <span class="deco" style="top:3%;left:6%;font-size:120px;opacity:.5;">🎃</span>
+    <span class="deco" style="top:-2%;left:33%;font-size:100px;opacity:.45;">🎃</span>
+    <span class="deco" style="top:0%;left:58%;font-size:112px;opacity:.5;">🎃</span>
+    <span class="deco" style="top:64%;left:1%;font-size:104px;opacity:.35;">🎃</span>
+    <span class="deco" style="top:82%;left:37%;font-size:112px;opacity:.5;">🎃</span>
+    <span class="deco" style="top:88%;left:54%;font-size:84px;opacity:.4;">🍁</span>
+    <span class="deco" style="top:30%;left:45%;font-size:60px;opacity:.5;transform:rotate(22deg);">🍁</span>
+    <span class="deco" style="top:70%;left:22%;font-size:54px;opacity:.5;transform:rotate(-16deg);">🍁</span>
+    <span class="deco" style="top:14%;right:16%;font-size:58px;opacity:.45;transform:rotate(14deg);">🍁</span>
+    <div class="banner-inner">
+      <div class="hero-left">
+        <div class="eyebrow2">SEASONAL LAUNCH</div>
+        <div class="headline-card">
+          <h1>Embrace the Coziness this Rainy Season</h1>
+          <hr>
+          <p class="intro">Introducing our new Signature Pumpkin Spice Latte</p>
+          <div class="mascot-slot slot" data-label="images/mascot.png · 92×112">
+            <img src="images/mascot.png" alt="Pumpkin mascot" onerror="this.remove()">
+          </div>
         </div>
+        <button class="try-btn" id="tryNowBtn">TRY NOW →</button>
       </div>
-      <div class="hero-art">
-        <!-- HERO PHOTO: put your main latte photo at images/hero-latte.png -->
-        <div class="frame"><img src="images/hero-latte.png" alt="Pumpkin spice latte with foam art"></div>
-        <div class="float-card">
-          <img src="images/pumpkin-latte.png" alt="Pumpkin spice latte">
-          <div>
-            <div class="t">Signature Pumpkin Spice Latte</div>
-            <div class="p">Now in store · ₱250</div>
+      <div class="hero-right">
+        <div class="checker"></div>
+        <div class="scallop-back"></div>
+        <div class="scallop">
+          <div class="slot hero-latte-slot" data-label="images/hero-latte.png · 380×490">
+            <img src="images/hero-latte.png" alt="Signature Pumpkin Spice Latte" onerror="this.remove()">
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <div class="season">
     <div class="inner">
@@ -730,6 +843,39 @@ window.addEventListener('scroll', () => {
   let current = 'home';
   sections.forEach(sec => { if(sec && window.scrollY >= sec.offsetTop - 120) current = sec.id; });
   links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#'+current));
+});
+
+/* ---------------- Login gate: must log in before anything else ---------------- */
+document.body.classList.add('locked');
+const gate = document.getElementById('gate');
+const gateErr = document.getElementById('gateErr');
+function setGateTab(tab){
+  document.querySelectorAll('.gate-tab').forEach(t => t.classList.toggle('active', t.dataset.gtab === tab));
+  document.getElementById('gateLoginForm').classList.toggle('hidden', tab !== 'login');
+  document.getElementById('gateSignupForm').classList.toggle('hidden', tab !== 'signup');
+  gateErr.classList.remove('show');
+}
+document.querySelectorAll('.gate-tab').forEach(t => t.addEventListener('click', () => setGateTab(t.dataset.gtab)));
+const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+function unlock(msg){
+  gate.classList.add('hidden');
+  document.body.classList.remove('locked');
+  showToast(msg);
+}
+document.getElementById('gateLoginForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const em = document.getElementById('gateEmail').value.trim();
+  const pw = document.getElementById('gatePass').value.trim();
+  if(!emailRe.test(em) || pw.length < 1){ gateErr.classList.add('show'); return; }
+  unlock('Welcome back to Brew Haven!');
+});
+document.getElementById('gateSignupForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const nm = document.getElementById('gateName').value.trim();
+  const em = document.getElementById('gateEmail2').value.trim();
+  const pw = document.getElementById('gatePass2').value.trim();
+  if(nm.length < 1 || !emailRe.test(em) || pw.length < 8){ gateErr.classList.add('show'); return; }
+  unlock('Account created — welcome to Brew Haven!');
 });
 </script>
 </body>
