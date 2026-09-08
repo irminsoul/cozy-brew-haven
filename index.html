@@ -289,8 +289,7 @@
     .hero-art .frame img{width:220px;height:270px;}
   }
 
-
-  /* ===== LOGIN GATE (must log in first) ===== */
+  /* ===== LOGIN GATE ===== */
   body.locked{overflow:hidden;}
   .gate{position:fixed;inset:0;z-index:999;background:linear-gradient(160deg,#F4A96F 0%,#EF9A5E 60%,#EB9054 100%);display:flex;align-items:center;justify-content:center;padding:24px;overflow:hidden;}
   .gate .gp{position:absolute;font-size:110px;opacity:.32;filter:blur(1px);pointer-events:none;}
@@ -307,7 +306,7 @@
   .gate-err{display:none;color:#FFD9C2;font-size:12.5px;font-weight:700;margin:-10px 0 14px;text-align:center;}
   .gate-err.show{display:block;}
 
-  /* ===== IMAGE SLOTS (drop your files in at the labeled paths/sizes) ===== */
+  /* ===== IMAGE SLOTS ===== */
   .slot{position:relative;background:repeating-linear-gradient(45deg,#E8B27F 0 14px,#F2C493 14px 28px);display:flex;align-items:center;justify-content:center;overflow:hidden;}
   .slot::after{content:attr(data-label);font-size:12px;font-weight:700;color:#7A421F;background:rgba(255,240,223,.92);padding:6px 10px;border-radius:8px;text-align:center;max-width:88%;line-height:1.4;}
   .slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
@@ -317,7 +316,7 @@
   .mascot-slot::after{background:rgba(255,240,223,.85);font-size:10px;padding:4px 6px;}
   .hero-latte-slot{width:100%;height:100%;border-radius:36% 64% 54% 46% / 50% 42% 58% 46%;}
 
-  /* ===== HEADER (matches banner bar in design) ===== */
+  /* ===== HEADER ===== */
   header{background:#C9843F;border-bottom:none;}
   header .nav{padding:12px 28px;}
   .nav-links a{color:#4A2515;font-size:16px;}
@@ -345,7 +344,6 @@
   .scallop-back{position:absolute;top:18px;right:36px;width:440px;height:550px;background:#F2913D;border-radius:38% 62% 55% 45% / 52% 40% 60% 48%;}
   .scallop{position:absolute;top:0;right:52px;width:440px;height:550px;border:4px dashed #2A1810;border-radius:38% 62% 55% 45% / 52% 40% 60% 48%;padding:28px;background:transparent;}
 
-  /* ===== Banner responsive ===== */
   @media(max-width:1020px){
     .banner-inner{grid-template-columns:1fr;padding:10px 24px 0;}
     .hero-right{min-height:520px;order:-1;}
@@ -361,11 +359,10 @@
     .try-btn{width:calc(100% - 12px);margin-left:6px;}
     .checker{width:420px;height:340px;background-size:72px 72px;}
   }
-
 </style>
 </head>
 <body>
-<!-- LOGIN GATE: page is locked until login/signup -->
+
 <div class="gate" id="gate">
   <span class="gp" style="top:5%;left:4%;">🎃</span>
   <span class="gp" style="top:12%;right:5%;">🎃</span>
@@ -373,8 +370,8 @@
   <span class="gp" style="bottom:16%;right:8%;font-size:80px;">🍁</span>
   <span class="gp" style="top:48%;left:-1%;font-size:70px;">🍁</span>
   <div class="gate-card">
-    <div class="logo-slot slot" data-label="images/logo.png · 118×56">
-      <img src="images/logo.png" alt="Brew Haven logo" onerror="this.remove()">
+    <div class="logo-slot slot" data-label="logo.png · 118×56">
+      <img src="logo.png" alt="Brew Haven logo" onerror="this.remove()">
     </div>
     <h2 class="display">Brew Haven</h2>
     <p class="sub">Log in first to start your order</p>
@@ -397,11 +394,10 @@
   </div>
 </div>
 
-
 <header>
   <nav class="nav">
-    <a class="logo-slot slot" data-label="images/logo.png · 118×56" href="#home" style="text-decoration:none;">
-      <img src="images/logo.png" alt="Brew Haven logo" onerror="this.remove()">
+    <a class="logo-slot slot" data-label="logo.png · 118×56" href="#home" style="text-decoration:none;">
+      <img src="logo.png" alt="Brew Haven logo" onerror="this.remove()">
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#menu" class="active">Menu</a></li>
@@ -435,8 +431,8 @@
           <h1>Embrace the Coziness this Rainy Season</h1>
           <hr>
           <p class="intro">Introducing our new Signature Pumpkin Spice Latte</p>
-          <div class="mascot-slot slot" data-label="images/mascot.png · 92×112">
-            <img src="images/mascot.png" alt="Pumpkin mascot" onerror="this.remove()">
+          <div class="mascot-slot slot" data-label="mascot.png · 92×112">
+            <img src="mascot.png" alt="Pumpkin mascot" onerror="this.remove()">
           </div>
         </div>
         <button class="try-btn" id="tryNowBtn">TRY NOW →</button>
@@ -445,8 +441,8 @@
         <div class="checker"></div>
         <div class="scallop-back"></div>
         <div class="scallop">
-          <div class="slot hero-latte-slot" data-label="images/hero-latte.png · 380×490">
-            <img src="images/hero-latte.png" alt="Signature Pumpkin Spice Latte" onerror="this.remove()">
+          <div class="slot hero-latte-slot" data-label="hero-latte.png · 380×490">
+            <img src="hero-latte.png" alt="Signature Pumpkin Spice Latte" onerror="this.remove()">
           </div>
         </div>
       </div>
@@ -574,7 +570,6 @@
   </div>
 </footer>
 
-<!-- Auth modal -->
 <div class="overlay" id="authOverlay">
   <div class="modal">
     <button class="close" id="authClose">✕</button>
@@ -606,7 +601,6 @@
   </div>
 </div>
 
-<!-- Cart drawer -->
 <div class="drawer" id="cartDrawer">
   <div class="drawer-head"><h3>Your order</h3><button class="close" id="cartClose">✕</button></div>
   <div class="drawer-items" id="cartItems"><div class="drawer-empty">Your cart is empty — add something from the menu.</div></div>
@@ -619,17 +613,16 @@
 <div class="toast" id="toast"></div>
 
 <script>
-/* ---------------- Menu data ---------------- */
 const MENU = [
-  {id:'psl', name:'Pumpkin Spice Latte', tag:'New Rain Comfort', desc:'Espresso, pumpkin spice, velvety milk.', price:250, cat:'drinks', img:'https://loremflickr.com/500/420/pumpkinspice,latte/all'},
-  {id:'cmm', name:'Caramel Mocha Macchiato', tag:'Popular Choice', desc:'Cocoa, bold espresso, caramel drizzle.', price:230, cat:'drinks', img:'https://loremflickr.com/500/420/caramel,macchiato/all'},
-  {id:'matcha', name:'Matcha Latte', tag:'Ultimate Favorite', desc:'Japanese green tea, creamy milk.', price:235, cat:'drinks', img:'https://loremflickr.com/500/420/matcha,latte/all'},
-  {id:'taro', name:'Milky Taro Latte', tag:'Creamy Delight', desc:'Sweet taro whisked with fresh milk.', price:190, cat:'drinks', img:'https://loremflickr.com/500/420/taro,latte/all'},
-  {id:'americano', name:'Iced Coffee Americano', tag:'Bold & Crisp', desc:'Double espresso, cold water, ice.', price:160, cat:'drinks', img:'https://loremflickr.com/500/420/icedcoffee,americano/all'},
-  {id:'strawberrymatcha', name:'Strawberry Matcha Latte', tag:'Layered Perfection', desc:'Fresh strawberry, matcha, milk.', price:220, cat:'drinks', img:'https://loremflickr.com/500/420/strawberry,matcha/all'},
-  {id:'ccc', name:'Chocolate Chip Cookies', tag:'Timeless Classic', desc:'Soft-baked, loaded with chocolate.', price:120, cat:'bakes', img:'https://loremflickr.com/500/420/chocolatechip,cookies/all'},
+  {id:'psl', name:'Pumpkin Spice Latte', tag:'New Rain Comfort', desc:'Espresso, pumpkin spice, velvety milk.', price:250, cat:'drinks', img:'pumpkinspic.jpg'},
+  {id:'cmm', name:'Caramel Mocha Macchiato', tag:'Popular Choice', desc:'Cocoa, bold espresso, caramel drizzle.', price:230, cat:'drinks', img:'caramelmocha.jpg'},
+  {id:'matcha', name:'Matcha Latte', tag:'Ultimate Favorite', desc:'Japanese green tea, creamy milk.', price:235, cat:'drinks', img:'matchacha.jpg'},
+  {id:'taro', name:'Milky Taro Latte', tag:'Creamy Delight', desc:'Sweet taro whisked with fresh milk.', price:190, cat:'drinks', img:'taroyum.jpg'},
+  {id:'americano', name:'Iced Coffee Americano', tag:'Bold & Crisp', desc:'Double espresso, cold water, ice.', price:160, cat:'drinks', img:'americanoo.png'},
+  {id:'strawberrymatcha', name:'Strawberry Matcha Latte', tag:'Layered Perfection', desc:'Fresh strawberry, matcha, milk.', price:220, cat:'drinks', img:'strawmatchacha.jpg'},
+  {id:'ccc', name:'Chocolate Chip Cookies', tag:'Timeless Classic', desc:'Soft-baked, loaded with chocolate.', price:120, cat:'bakes', img:'choccookie.jpg'},
   {id:'cupcake', name:'Neapolitan Cupcake', tag:'Sweet Indulgence', desc:'Vanilla, chocolate, strawberry swirl.', price:140, cat:'bakes', img:'https://loremflickr.com/500/420/cupcake,dessert/all'},
-  {id:'redvelvet', name:'Red Velvet Cookies', tag:'Rich & Decadent', desc:'Cream cheese chips, cocoa crumb.', price:130, cat:'bakes', img:'https://loremflickr.com/500/420/redvelvet,cookies/all'},
+  {id:'redvelvet', name:'Red Velvet Cookies', tag:'Rich & Decadent', desc:'Cream cheese chips, cocoa crumb.', price:130, cat:'bakes', img:'rvcookie.jpg'},
 ];
 
 const state = { qty:{}, cart:{} };
@@ -637,7 +630,6 @@ MENU.forEach(m => state.qty[m.id] = 1);
 
 const peso = n => '₱' + n.toLocaleString();
 
-/* ---------------- Render menu ---------------- */
 const grid = document.getElementById('menuGrid');
 function renderMenu(filter='all'){
   grid.innerHTML = '';
@@ -686,7 +678,6 @@ grid.addEventListener('click', e => {
   }
 });
 
-/* ---------------- Menu tabs ---------------- */
 document.querySelectorAll('.menu-tab').forEach(tab => {
   tab.addEventListener('click', () => {
     document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
@@ -695,7 +686,6 @@ document.querySelectorAll('.menu-tab').forEach(tab => {
   });
 });
 
-/* ---------------- Cart drawer ---------------- */
 const cartItemsEl = document.getElementById('cartItems');
 const cartTotalEl = document.getElementById('cartTotal');
 const cartCountEl = document.getElementById('cartCount');
@@ -740,7 +730,6 @@ document.getElementById('checkoutBtn').addEventListener('click', () => {
   cartDrawer.classList.remove('show');
 });
 
-/* ---------------- Try Now button ---------------- */
 document.getElementById('tryNowBtn').addEventListener('click', () => {
   document.getElementById('menu').scrollIntoView({behavior:'smooth'});
   const item = MENU.find(m => m.id === 'psl');
@@ -749,7 +738,6 @@ document.getElementById('tryNowBtn').addEventListener('click', () => {
   setTimeout(() => showToast('Added Pumpkin Spice Latte to your order'), 500);
 });
 
-/* ---------------- Auth modal ---------------- */
 const authOverlay = document.getElementById('authOverlay');
 const loginPane = document.getElementById('loginPane');
 const signupPane = document.getElementById('signupPane');
@@ -788,7 +776,6 @@ document.getElementById('signupForm').addEventListener('submit', e => {
   }, 900);
 });
 
-/* ---------------- Contact form ---------------- */
 const contactForm = document.getElementById('contactForm');
 contactForm.addEventListener('submit', e => {
   e.preventDefault();
@@ -816,7 +803,6 @@ function toggleField(id, ok){
   document.getElementById(id).classList.toggle('invalid', !ok);
 }
 
-/* ---------------- Toast ---------------- */
 let toastTimer;
 function showToast(msg){
   const el = document.getElementById('toast');
@@ -826,7 +812,6 @@ function showToast(msg){
   toastTimer = setTimeout(() => el.classList.remove('show'), 2600);
 }
 
-/* ---------------- Mobile menu ---------------- */
 const navLinks = document.getElementById('navLinks');
 document.getElementById('menuToggle').addEventListener('click', () => {
   navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
@@ -836,7 +821,6 @@ navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   if(window.innerWidth <= 920) navLinks.style.display = 'none';
 }));
 
-/* ---------------- Active nav on scroll ---------------- */
 const sections = ['home','menu','about','contact'].map(id => document.getElementById(id));
 const links = document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll', () => {
@@ -845,7 +829,6 @@ window.addEventListener('scroll', () => {
   links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#'+current));
 });
 
-/* ---------------- Login gate: must log in before anything else ---------------- */
 document.body.classList.add('locked');
 const gate = document.getElementById('gate');
 const gateErr = document.getElementById('gateErr');
