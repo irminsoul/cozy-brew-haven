@@ -8,16 +8,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --cream:#FBF3E7;
-    --panel:#F4E4CE;
-    --espresso:#2A1710;
-    --bark:#4A2C17;
-    --clay:#BE5127;
-    --clay-dark:#8F3A19;
-    --tan:#E7B98A;
-    --latte:#F1D9B8;
-    --ink-soft:#6B4A32;
-    --line: rgba(42,23,16,0.14);
+    --cream:#FFF0DF;
+    --panel:#E9A16F;
+    --espresso:#4A2515;
+    --bark:#6E3217;
+    --clay:#C56B32;
+    --clay-dark:#9B451B;
+    --tan:#F1B181;
+    --latte:#F6C39A;
+    --ink-soft:#6B351C;
+    --line: rgba(74,37,21,0.16);
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -261,13 +261,44 @@
     .two-col{grid-template-columns:1fr;}
     .wrap{padding:0 20px;}
   }
+
+  @media(max-width:920px){
+    .hero-copy{max-width:100%;}
+    .hero h1{font-size:clamp(42px,9vw,62px);}
+    .hero .lede{font-size:21px;}
+    .hero .cta-row{padding-left:0;}
+    .hero .cta-row .btn-primary{min-width:0;font-size:24px;width:100%;}
+    .hero-art{min-height:480px;order:-1;}
+    .hero-art::before{width:390px;height:520px;right:-70px;}
+    .hero-art .frame{width:380px;height:380px;}
+    .hero-art .frame img{width:285px;height:350px;}
+  }
+
+  @media(max-width:600px){
+    .nav{padding:12px 15px;}
+    .brand .mark{width:90px;height:50px;}
+    .hero{padding:30px 0 60px;}
+    .hero .wrap{padding:0 20px;}
+    .eyebrow{font-size:21px;margin-left:10px;}
+    .hero-copy{padding:20px;border-radius:35px;}
+    .hero h1{font-size:43px;}
+    .hero .lede{font-size:18px;}
+    .hero-art{min-height:390px;}
+    .hero-art::before{width:300px;height:410px;right:-60px;}
+    .hero-art .frame{width:285px;height:285px;}
+    .hero-art .frame img{width:220px;height:270px;}
+  }
+
 </style>
 </head>
 <body>
 
 <header>
   <nav class="nav">
-    <div class="brand"><span class="mark">☕</span>Brew Haven</div>
+    <div class="brand">
+      <!-- LOGO: put your logo PNG at images/logo.png -->
+      <span class="mark"><img src="images/logo.png" alt="Brew Haven logo"></span>
+    </div>
     <ul class="nav-links" id="navLinks">
       <li><a href="#home" class="active">Home</a></li>
       <li><a href="#menu">Menu</a></li>
@@ -296,9 +327,10 @@
         </div>
       </div>
       <div class="hero-art">
-        <div class="frame"><img src="https://loremflickr.com/900/1100/latte,coffee/all" alt="Pumpkin spice latte with foam art"></div>
+        <!-- HERO PHOTO: put your main latte photo at images/hero-latte.png -->
+        <div class="frame"><img src="images/hero-latte.png" alt="Pumpkin spice latte with foam art"></div>
         <div class="float-card">
-          <img src="https://loremflickr.com/200/200/pumpkinspice,latte/all" alt="Pumpkin spice latte">
+          <img src="images/pumpkin-latte.png" alt="Pumpkin spice latte">
           <div>
             <div class="t">Signature Pumpkin Spice Latte</div>
             <div class="p">Now in store · ₱250</div>
