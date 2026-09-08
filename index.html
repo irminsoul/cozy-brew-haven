@@ -88,9 +88,9 @@
   .menu-toggle{display:none;width:42px;height:42px;border-radius:50%;background:var(--panel);align-items:center;justify-content:center;}
 
   /* ---------- Landing Banner ---------- */
-  .hero-banner{position:relative;overflow:hidden;background:linear-gradient(180deg,#F3A66D 0%,#F6B37E 100%);padding:40px 0 20px;}
+  .hero-banner{position:relative;overflow:hidden;background:linear-gradient(180deg,#F3A66D 0%,#F6B37E 100%);padding:40px 0 30px;}
   .hero-banner .deco{position:absolute;pointer-events:none;user-select:none;line-height:1;}
-  .banner-inner{position:relative;max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr;gap:24px;align-items:center;padding:20px 44px 0;}
+  .banner-inner{position:relative;max-width:1380px;margin:0 auto;display:grid;grid-template-columns:1fr 1.35fr;gap:28px;align-items:center;padding:20px 44px 0;}
   .eyebrow2{font-weight:800;letter-spacing:.07em;color:#6E3517;font-size:15px;margin:10px 0 14px 6px;}
   .headline-card{position:relative;background:#A4602F;border-radius:28px;padding:46px 42px 50px;color:#FFEAD3;box-shadow:0 26px 52px -18px rgba(90,40,10,.38);}
   .headline-card h1{font-size:clamp(38px,4.5vw,62px);line-height:1.08;color:#FFEAD3;font-style:italic;font-weight:700;max-width:12ch;}
@@ -99,7 +99,7 @@
 
   /* Mascot (Border & Background Removed) */
   .mascot-img{
-    width:115px;
+    width:125px;
     height:auto;
     margin-top:22px;
     border:none !important;
@@ -113,27 +113,26 @@
   .try-btn:hover{background:#CE5F0E;transform:translateY(-2px);}
   
   /* Hero Right (Enlarged Hero Latte Container) */
-  .hero-right{position:relative;min-height:680px;}
-  .checker{position:absolute;right:-70px;bottom:-60px;width:640px;height:540px;background:repeating-conic-gradient(#F2913D 0% 25%, #FFE7CE 0% 50%);background-size:96px 96px;transform:rotate(-7deg);border-radius:8px;}
-  .scallop-back{position:absolute;top:10px;right:20px;width:510px;height:630px;background:#F2913D;border-radius:38% 62% 55% 45% / 52% 40% 60% 48%;}
-  .scallop{position:absolute;top:-10px;right:36px;width:510px;height:630px;border:4px dashed #2A1810;border-radius:38% 62% 55% 45% / 52% 40% 60% 48%;padding:20px;background:transparent;overflow:hidden;}
+  .hero-right{position:relative;min-height:780px;}
+  .checker{position:absolute;right:-80px;bottom:-70px;width:750px;height:650px;background:repeating-conic-gradient(#F2913D 0% 25%, #FFE7CE 0% 50%);background-size:110px 110px;transform:rotate(-7deg);border-radius:8px;}
+  .scallop-back{position:absolute;top:0;right:0;width:630px;height:750px;background:#F2913D;border-radius:38% 62% 55% 45% / 52% 40% 60% 48%;}
+  .scallop{position:absolute;top:-20px;right:20px;width:630px;height:750px;border:5px dashed #2A1810;border-radius:38% 62% 55% 45% / 52% 40% 60% 48%;padding:16px;background:transparent;overflow:hidden;}
 
   /* ---------- Section shells ---------- */
   section{padding:90px 0;}
-  .section-head{max-width:560px;margin:0 auto 48px;text-align:center;}
+  .section-head{max-width:620px;margin:0 auto 48px;text-align:center;}
   .section-head h2{font-size:clamp(30px,3.6vw,42px);color:var(--bark);}
   .section-head p{margin-top:14px;color:var(--ink-soft);font-size:16.5px;}
   .tag{font-size:13px;font-weight:700;color:var(--clay-dark);}
 
-  /* ---------- Season strip ---------- */
+  /* ---------- Season strip (Coffee beans removed) ---------- */
   .season{background:var(--bark);color:var(--cream);border-radius:52px;margin:0 32px;}
   .season .inner{
-    max-width:1176px;margin:0 auto;padding:56px 44px;
-    display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;
+    max-width:980px;margin:0 auto;padding:56px 44px;
+    text-align:center;
   }
-  .season h3{font-size:clamp(24px,2.6vw,32px);max-width:22ch;}
-  .season .desc{margin-top:12px;color:var(--tan);font-size:15px;max-width:40ch;}
-  .season img{width:140px;height:140px;object-fit:cover;border-radius:24px;border:2px solid var(--tan);}
+  .season h3{font-size:clamp(26px,2.8vw,36px);margin:10px auto 0;max-width:28ch;}
+  .season .desc{margin:14px auto 0;color:var(--tan);font-size:16px;max-width:54ch;line-height:1.6;}
 
   /* ---------- Menu ---------- */
   .menu-tabs{display:flex;justify-content:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
@@ -183,11 +182,11 @@
   .field.invalid input, .field.invalid textarea, .field.invalid select{border-color:#B23A2E;}
   .field.invalid .err{display:block;}
   .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-  .contact-side{background:var(--bark);color:var(--cream);padding:52px 44px;display:flex;flex-direction:column;gap:26px;}
-  .contact-side h3{font-family:'Fraunces',serif;font-style:italic;font-size:22px;}
-  .side-row{display:flex;gap:14px;align-items:flex-start;}
-  .side-row .ic{width:38px;height:38px;border-radius:50%;background:var(--clay);flex:none;display:flex;align-items:center;justify-content:center;font-size:16px;}
-  .side-row .t{font-size:14.5px;color:var(--tan);line-height:1.5;}
+  .contact-side{background:var(--bark);color:var(--cream);padding:52px 44px;display:flex;flex-direction:column;gap:26px;justify-content:center;}
+  .contact-side h3{font-family:'Fraunces',serif;font-style:italic;font-size:26px;}
+  .side-row{display:flex;gap:16px;align-items:flex-start;}
+  .side-row .ic{width:42px;height:42px;border-radius:50%;background:var(--clay);flex:none;display:flex;align-items:center;justify-content:center;font-size:18px;}
+  .side-row .t{font-size:15.5px;color:var(--tan);line-height:1.5;}
   .form-success{
     display:none;background:#2E5339;color:#EAF3E9;padding:14px 18px;border-radius:14px;
     font-size:14px;font-weight:600;margin-bottom:20px;align-items:center;gap:10px;
@@ -267,13 +266,13 @@
   .gate-err{display:none;color:#FFD9C2;font-size:12.5px;font-weight:700;margin:-10px 0 14px;text-align:center;}
   .gate-err.show{display:block;}
 
-  @media(max-width:1020px){
+  @media(max-width:1120px){
     .banner-inner{grid-template-columns:1fr;padding:10px 24px 0;}
-    .hero-right{min-height:560px;order:-1;}
-    .scallop,.scallop-back{width:380px;height:480px;}
+    .hero-right{min-height:580px;order:-1;}
+    .scallop,.scallop-back{width:450px;height:550px;}
     .scallop{right:50%;transform:translateX(50%);}
     .scallop-back{right:50%;transform:translateX(50%) translate(14px,16px);}
-    .checker{right:-100px;bottom:-40px;}
+    .checker{right:-80px;bottom:-40px;width:550px;height:450px;}
     .nav-links{display:none;}
     .menu-toggle{display:flex;}
   }
@@ -282,10 +281,10 @@
     .two-col{grid-template-columns:1fr;}
     .wrap{padding:0 20px;}
     .headline-card{padding:34px 26px 56px;}
-    .hero-right{min-height:440px;}
-    .scallop,.scallop-back{width:300px;height:380px;}
+    .hero-right{min-height:420px;}
+    .scallop,.scallop-back{width:310px;height:390px;}
     .try-btn{width:calc(100% - 12px);margin-left:6px;}
-    .checker{width:420px;height:340px;background-size:72px 72px;}
+    .checker{width:380px;height:320px;background-size:72px 72px;}
   }
 </style>
 </head>
@@ -375,14 +374,9 @@
 
   <div class="season">
     <div class="inner">
-      <div>
-        <span class="tag">THE RAIN SERIES</span>
-        <h3>Four new drinks made for grey skies and slow mornings</h3>
-        <p class="desc">Warm spice, toasted nut, and deep cocoa notes — crafted to be sipped slowly while the rain does its thing outside.</p>
-      </div>
-      <div class="season-item">
-        <img src="coffee-beans.jpg" onerror="this.src='https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop'" alt="Fresh roasted coffee beans">
-      </div>
+      <span class="tag">THE RAIN SERIES</span>
+      <h3>Four new drinks made for grey skies and slow mornings</h3>
+      <p class="desc">Warm spice, toasted nut, and deep cocoa notes — crafted to be sipped slowly while the rain does its thing outside.</p>
     </div>
   </div>
 
@@ -404,15 +398,22 @@
     </div>
   </section>
 
+  <!-- BREW HAVEN CAFE INTERIOR SECTION -->
   <section id="about">
-    <div class="wrap contact-wrap" style="grid-template-columns:1fr;background:var(--panel);padding:0;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;align-items:stretch;">
-        <div style="padding:56px 52px;display:flex;flex-direction:column;justify-content:center;">
-          <span class="tag">ABOUT BREW HAVEN</span>
-          <h2 style="margin-top:10px;font-size:32px;color:var(--bark);">A corner of the city built for lingering</h2>
-          <p style="margin-top:16px;color:var(--ink-soft);font-size:15.5px;line-height:1.7;">Since opening on Main St., Brew Haven has been roasting small batches and baking daily so every visit feels a little slower than the one before. Pull up a chair — the rain isn't going anywhere.</p>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag">OUR HAVEN</span>
+        <h2>Brew Haven Cafe Interior</h2>
+        <p>A warm, cozy sanctuary crafted for quiet mornings, good books, and slow rain.</p>
+      </div>
+      <div style="border-radius:36px;overflow:hidden;background:var(--panel);box-shadow:0 24px 50px -15px rgba(74,37,21,0.22);">
+        <img src="cafe-interior.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop';" alt="Brew Haven Cafe Interior" style="width:100%;max-height:580px;object-fit:cover;display:block;">
+        <div style="padding:40px 48px;background:var(--panel);">
+          <h3 style="font-family:'Fraunces',serif;font-size:28px;color:var(--bark);margin-bottom:12px;">Step Inside Our Cozy Corner</h3>
+          <p style="color:var(--ink-soft);font-size:16px;line-height:1.7;max-width:85ch;">
+            Since opening on Main St., Brew Haven has been roasting small batches and baking daily so every visit feels a little slower than the one before. With warm timber finishes, soft ambient lighting, and plush seating, pull up a chair — the rain isn't going anywhere.
+          </p>
         </div>
-        <img src="cafe-interior.jpg" onerror="this.src='https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1000&auto=format&fit=crop'" alt="Brew Haven cafe interior" style="width:100%;height:100%;min-height:360px;object-fit:cover;">
       </div>
     </div>
   </section>
@@ -461,10 +462,10 @@
           </form>
         </div>
         <div class="contact-side">
-          <h3>Visit our cafe</h3>
+          <h3>Visit Our Cafe</h3>
           <div class="side-row"><span class="ic">📍</span><span class="t">Main St. Corner<br>Open Daily 7 AM – 6 PM</span></div>
           <div class="side-row"><span class="ic">📞</span><span class="t">+63 917 123 4567<br>brewhaven@gmail.com</span></div>
-          <img src="storefront.jpg" onerror="this.src='https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=600&auto=format&fit=crop'" alt="Brew Haven storefront" style="border-radius:20px;margin-top:6px;width:100%;height:220px;object-fit:cover;">
+          <div class="side-row"><span class="ic">☕</span><span class="t">Dine-in, Takeout & Express Pickup Available</span></div>
         </div>
       </div>
     </div>
@@ -741,7 +742,7 @@ document.getElementById('menuToggle').addEventListener('click', () => {
   navLinks.style.cssText += 'flex-direction:column;position:absolute;top:72px;left:20px;right:20px;background:var(--cream);padding:20px;border-radius:20px;box-shadow:0 20px 40px rgba(0,0,0,.15);z-index:60;';
 });
 navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  if(window.innerWidth <= 1020) navLinks.style.display = 'none';
+  if(window.innerWidth <= 1120) navLinks.style.display = 'none';
 }));
 
 const sections = ['home','menu','about','contact'].map(id => document.getElementById(id));
