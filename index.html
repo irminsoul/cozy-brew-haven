@@ -262,33 +262,6 @@
     .wrap{padding:0 20px;}
   }
 
-  @media(max-width:920px){
-    .hero-copy{max-width:100%;}
-    .hero h1{font-size:clamp(42px,9vw,62px);}
-    .hero .lede{font-size:21px;}
-    .hero .cta-row{padding-left:0;}
-    .hero .cta-row .btn-primary{min-width:0;font-size:24px;width:100%;}
-    .hero-art{min-height:480px;order:-1;}
-    .hero-art::before{width:390px;height:520px;right:-70px;}
-    .hero-art .frame{width:380px;height:380px;}
-    .hero-art .frame img{width:285px;height:350px;}
-  }
-
-  @media(max-width:600px){
-    .nav{padding:12px 15px;}
-    .brand .mark{width:90px;height:50px;}
-    .hero{padding:30px 0 60px;}
-    .hero .wrap{padding:0 20px;}
-    .eyebrow{font-size:21px;margin-left:10px;}
-    .hero-copy{padding:20px;border-radius:35px;}
-    .hero h1{font-size:43px;}
-    .hero .lede{font-size:18px;}
-    .hero-art{min-height:390px;}
-    .hero-art::before{width:300px;height:410px;right:-60px;}
-    .hero-art .frame{width:285px;height:285px;}
-    .hero-art .frame img{width:220px;height:270px;}
-  }
-
   /* ===== LOGIN GATE ===== */
   body.locked{overflow:hidden;}
   .gate{position:fixed;inset:0;z-index:999;background:linear-gradient(160deg,#F4A96F 0%,#EF9A5E 60%,#EB9054 100%);display:flex;align-items:center;justify-content:center;padding:24px;overflow:hidden;}
@@ -305,16 +278,6 @@
   .gate-btn:hover{background:#CE5F0E;transform:translateY(-1px);}
   .gate-err{display:none;color:#FFD9C2;font-size:12.5px;font-weight:700;margin:-10px 0 14px;text-align:center;}
   .gate-err.show{display:block;}
-
-  /* ===== IMAGE SLOTS ===== */
-  .slot{position:relative;background:repeating-linear-gradient(45deg,#E8B27F 0 14px,#F2C493 14px 28px);display:flex;align-items:center;justify-content:center;overflow:hidden;}
-  .slot::after{content:attr(data-label);font-size:12px;font-weight:700;color:#7A421F;background:rgba(255,240,223,.92);padding:6px 10px;border-radius:8px;text-align:center;max-width:88%;line-height:1.4;}
-  .slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
-  .logo-slot{width:118px;height:56px;border-radius:12px;background:#FFE7CE;flex:none;}
-  .logo-slot img{object-fit:contain;padding:4px;}
-  .mascot-slot{width:92px;height:112px;border-radius:14px;background:transparent;}
-  .mascot-slot::after{background:rgba(255,240,223,.85);font-size:10px;padding:4px 6px;}
-  .hero-latte-slot{width:100%;height:100%;border-radius:36% 64% 54% 46% / 50% 42% 58% 46%;}
 
   /* ===== HEADER ===== */
   header{background:#C9843F;border-bottom:none;}
@@ -342,7 +305,7 @@
   .hero-right{position:relative;min-height:620px;}
   .checker{position:absolute;right:-80px;bottom:-70px;width:600px;height:500px;background:repeating-conic-gradient(#F2913D 0% 25%, #FFE7CE 0% 50%);background-size:96px 96px;transform:rotate(-7deg);border-radius:8px;}
   .scallop-back{position:absolute;top:18px;right:36px;width:440px;height:550px;background:#F2913D;border-radius:38% 62% 55% 45% / 52% 40% 60% 48%;}
-  .scallop{position:absolute;top:0;right:52px;width:440px;height:550px;border:4px dashed #2A1810;border-radius:38% 62% 55% 45% / 52% 40% 60% 48%;padding:28px;background:transparent;}
+  .scallop{position:absolute;top:0;right:52px;width:440px;height:550px;border:4px dashed #2A1810;border-radius:38% 62% 55% 45% / 52% 40% 60% 48%;padding:28px;background:transparent;overflow:hidden;}
 
   @media(max-width:1020px){
     .banner-inner{grid-template-columns:1fr;padding:10px 24px 0;}
@@ -370,8 +333,8 @@
   <span class="gp" style="bottom:16%;right:8%;font-size:80px;">🍁</span>
   <span class="gp" style="top:48%;left:-1%;font-size:70px;">🍁</span>
   <div class="gate-card">
-    <div class="logo-slot slot" data-label="logo.png · 118×56">
-      <img src="logo.png" alt="Brew Haven logo" onerror="this.remove()">
+    <div style="display:flex;justify-content:center;margin-bottom:12px;">
+      <img src="logo.png" alt="Brew Haven logo" style="height:56px;width:auto;">
     </div>
     <h2 class="display">Brew Haven</h2>
     <p class="sub">Log in first to start your order</p>
@@ -396,8 +359,8 @@
 
 <header>
   <nav class="nav">
-    <a class="logo-slot slot" data-label="logo.png · 118×56" href="#home" style="text-decoration:none;">
-      <img src="logo.png" alt="Brew Haven logo" onerror="this.remove()">
+    <a class="brand" href="#home" style="text-decoration:none;">
+      <img src="logo.png" alt="Brew Haven logo" style="height:48px;width:auto;">
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#menu" class="active">Menu</a></li>
@@ -414,7 +377,7 @@
 </header>
 
 <main id="home">
-  <div class="hero-banner" id="home">
+  <div class="hero-banner">
     <span class="deco" style="top:3%;left:6%;font-size:120px;opacity:.5;">🎃</span>
     <span class="deco" style="top:-2%;left:33%;font-size:100px;opacity:.45;">🎃</span>
     <span class="deco" style="top:0%;left:58%;font-size:112px;opacity:.5;">🎃</span>
@@ -431,9 +394,7 @@
           <h1>Embrace the Coziness this Rainy Season</h1>
           <hr>
           <p class="intro">Introducing our new Signature Pumpkin Spice Latte</p>
-          <div class="mascot-slot slot" data-label="mascot.png · 92×112">
-            <img src="mascot.png" alt="Pumpkin mascot" onerror="this.remove()">
-          </div>
+          <img src="mascot.png" alt="Pumpkin mascot" style="width:92px;height:auto;margin-top:18px;">
         </div>
         <button class="try-btn" id="tryNowBtn">TRY NOW →</button>
       </div>
@@ -441,9 +402,7 @@
         <div class="checker"></div>
         <div class="scallop-back"></div>
         <div class="scallop">
-          <div class="slot hero-latte-slot" data-label="hero-latte.png · 380×490">
-            <img src="hero-latte.png" alt="Signature Pumpkin Spice Latte" onerror="this.remove()">
-          </div>
+          <img src="hero-latte.png" alt="Signature Pumpkin Spice Latte" style="width:100%;height:100%;object-fit:cover;border-radius:38% 62% 55% 45% / 52% 40% 60% 48%;">
         </div>
       </div>
     </div>
@@ -621,7 +580,7 @@ const MENU = [
   {id:'americano', name:'Iced Coffee Americano', tag:'Bold & Crisp', desc:'Double espresso, cold water, ice.', price:160, cat:'drinks', img:'americanoo.png'},
   {id:'strawberrymatcha', name:'Strawberry Matcha Latte', tag:'Layered Perfection', desc:'Fresh strawberry, matcha, milk.', price:220, cat:'drinks', img:'strawmatchacha.jpg'},
   {id:'ccc', name:'Chocolate Chip Cookies', tag:'Timeless Classic', desc:'Soft-baked, loaded with chocolate.', price:120, cat:'bakes', img:'choccookie.jpg'},
-  {id:'cupcake', name:'Neapolitan Cupcake', tag:'Sweet Indulgence', desc:'Vanilla, chocolate, strawberry swirl.', price:140, cat:'bakes', img:'pinkcupcakee.jpg'},
+  {id:'cupcake', name:'Neapolitan Cupcake', tag:'Sweet Indulgence', desc:'Vanilla, chocolate, strawberry swirl.', price:140, cat:'bakes', img:'choccookie.jpg'},
   {id:'redvelvet', name:'Red Velvet Cookies', tag:'Rich & Decadent', desc:'Cream cheese chips, cocoa crumb.', price:130, cat:'bakes', img:'rvcookie.jpg'},
 ];
 
